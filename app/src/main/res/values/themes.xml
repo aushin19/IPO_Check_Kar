@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.IPOSeeker" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/background</item>
+        <item name="colorAccent">@color/primary</item>
+
+        <item name="android:colorSecondary">#000</item>
+        <item name="android:statusBarColor">@color/background</item>
+
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorControlHighlight">@color/primary_ripple</item>
+
+        <item name="material_dialog_background">@color/card_background</item>
+        <item name="material_dialog_title_text_color">@color/sub_font</item>
+        <item name="material_dialog_message_text_color">@color/primary</item>
+        <item name="material_dialog_negative_button_text_color">@color/primary</item>
+        <item name="material_dialog_positive_button_text_color">@color/background</item>
+        <item name="material_dialog_positive_button_color">@color/primary</item>
+    </style>
+
+    <style name="Table_Title" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Table_SubTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="bottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetDialog</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

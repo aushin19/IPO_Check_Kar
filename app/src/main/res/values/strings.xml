@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IPO Check Kar</string>
+    <string name="ipo_share_body">Hey! Found a cool app – *IPO CHECK KAR*. It breaks down upcoming IPOs: company deets, value, risks, returns. Don\'t miss out! Get the app now! 🚀 *#IPOCHECKKAR*</string>
+    <string name="adblocker_prompt">We have detected that you are using an Adblocker on your device. Please disable your Adblocker and restart your app to continue using it.</string>
+    <string name="Privacy"><u>Privacy Policy</u></string>
+    <string name="agree">I agree &amp; accept</string>
+    <string name="Terms"><u>Terms of use</u></string>
+</resources>

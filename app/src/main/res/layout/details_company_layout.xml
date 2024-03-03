@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.DetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10"
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabLayout"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/check_allotment_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bottom_nav_background"
+                android:backgroundTint="@color/primary"
+                android:visibility="visible"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="CHECK ALLOTMENT"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_allotment_button">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="About Company"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/details_about_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="sans-serif"
+                    android:text="About the Company"
+                    android:textColor="@color/sub_font"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/drhp_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rhp_download"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="DRHP"
+                            android:textColor="@color/sub_font"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                            app:layout_constraintStart_toStartOf="@+id/imageView2"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_file_download" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rhp_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/drhp_download"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="RHP"
+                            android:textColor="@color/sub_font"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_file_download" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <TextView
+                    android:id="@+id/details_ipo_issue_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/small_arrow_right"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="5dp"
+                    android:text="IPO Issue Details"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_issue_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_issue_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_issue_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_issue_details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/issue_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Open Date *"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_open_date"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Close Date *"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_close_date"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Allotment Date *"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_allotment_date"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Listing Date *"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_listing_date"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Listing at Group(s)"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_listing_group"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Registrar of IPO"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_registrar"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Price Range"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_price_range"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Issue Size"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_issue_size"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Offer for Sale"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_offer_sale"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Fresh Issue"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_fresh_issue"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Face Value"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_face_value"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="IPO Discount"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_discount"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#616161"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="#616161"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                <TextView
+                    android:id="@+id/details_ipo_lots_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/small_arrow_right"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="5dp"
+                    android:text="IPO Lots Details"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_lots_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_lots_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_lots_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_lots_details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/lot_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Issue Price"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_issue_price"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Market Lot"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_market_lot"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="1 Lot Amount (Max)"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_lot_amount"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Min Small HNI Lots(2-10 Lakh)"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_small_hni"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Min Big HNI Lots(10+ Lakh)"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_big_hni"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Promoter Holding Pre IPO"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_promoter_holding_pre_ipo"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+
+                            <TableRow android:padding="10dp">
+
+                                <TextView
+                                    style="@style/Table_Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Promoter Holding Post IPO"
+                                    android:textAlignment="textStart"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/table_ipo_promoter_holding_post_ipo"
+                                    style="@style/Table_SubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="--"
+                                    android:textAlignment="textEnd" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/subs_detail_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#616161"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/details_ipo_subscription_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/small_arrow_right"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="5dp"
+                    android:text="IPO Subscription Details"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_subs_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_subscription_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_subscription_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_subscription_details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/subscription_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:gravity="fill"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_subs_offer_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_subscription_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_subscription_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_subs_details_cardview">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/subscription_offer_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:gravity="fill"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/financial_detail_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subs_detail_section">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#616161"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/details_ipo_financial_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/small_arrow_right"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="5dp"
+                    android:text="IPO Financial Details"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_financial_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/amount_unit"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_financial_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_financial_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_financial_details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/financial_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:gravity="fill"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/amount_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="*Lakhs"
+                    android:textColor="@color/sub_font"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_financial_details_cardview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gmp_detail_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/financial_detail_section">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#616161"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/details_ipo_gmp_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/small_arrow_right"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="5dp"
+                    android:text="IPO GMP Details"
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/details_ipo_gmp_details_cardview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#484848"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/details_ipo_gmp_details"
+                    app:layout_constraintStart_toStartOf="@+id/details_ipo_gmp_details"
+                    app:layout_constraintTop_toBottomOf="@+id/details_ipo_gmp_details">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/gmp_details_table"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:divider="#616161"
+                            android:dividerPadding="5dp"
+                            android:gravity="fill"
+                            android:showDividers="middle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

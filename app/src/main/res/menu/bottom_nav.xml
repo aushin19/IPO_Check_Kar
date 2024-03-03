@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/upcoming_ipo_fragment"
+        android:title="Live &amp; Upcoming IPO"
+        android:icon="@drawable/ic_ipo"/>
+
+    <item android:id="@+id/listed_ipo_fragment"
+        android:title="Closed &amp; Listed IPO"
+        android:icon="@drawable/ic_sme"/>
+
+</menu>

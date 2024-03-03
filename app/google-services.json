@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048635129668",
+    "project_id": "ipocheckkar",
+    "storage_bucket": "ipocheckkar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048635129668:android:b5f39630c3c0e224016111",
+        "android_client_info": {
+          "package_name": "com.chartianz.ipocheckkar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuyhczkUzA93P5MZsrRaSG1A-zxw942Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
