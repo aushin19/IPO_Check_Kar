@@ -63,7 +63,7 @@ public class GetLiveIPOFeed extends AsyncTask<Void, Void, Void> {
 
                     ControllerActivity.ipoInfoArrayList = ipoFeedModalArrayList;
                 } catch (JSONException e) {
-
+                    Log.d("GetLiveIPOFeed", e.getMessage());
                 }
             }else{
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
@@ -75,7 +75,7 @@ public class GetLiveIPOFeed extends AsyncTask<Void, Void, Void> {
             }
 
         } catch (IOException e) {
-
+            Log.d("GetLiveIPOFeed", e.getMessage());
         }
         return null;
     }

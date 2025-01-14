@@ -32,6 +32,8 @@ import com.chartianz.ipocheckkar.ui.fragments.listed_ipo_fragment;
 import com.chartianz.ipocheckkar.ui.fragments.live_ipo_fragment;
 import com.chartianz.ipocheckkar.utils.CheckInternet;
 import com.chartianz.ipocheckkar.utils.KeyboardUtils;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.transition.MaterialElevationScale;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -39,13 +41,9 @@ import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.play.core.review.ReviewException;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;
-import com.google.android.play.core.review.model.ReviewErrorCode;
-import com.google.android.play.core.tasks.OnSuccessListener;
-import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.onesignal.Continue;
 import com.onesignal.OneSignal;
@@ -113,7 +111,7 @@ public class ControllerActivity extends AppCompatActivity implements BottomNavig
         request.addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 ReviewInfo reviewInfo = task.getResult();
-                Task <Void> flow = reviewManager.launchReviewFlow(this, reviewInfo);
+                Task<Void> flow = reviewManager.launchReviewFlow(this, reviewInfo);
                 flow.addOnCompleteListener(task1 -> {
 
                 });
