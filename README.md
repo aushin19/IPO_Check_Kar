@@ -1,5 +1,9 @@
 # 📈 IPO Check Kar – Your Ultimate IPO Tracker 🚀  
 
+
+![Logo](https://play-lh.googleusercontent.com/3V2JC9Vz8HquNkwV0_uD4LqjwD898PddXPLJS6A-O0xdL7qPiA4_JKeWLUqTBuOhNMI=w832-h470-rw)
+
+
 ### **🔍 Overview**  
 **IPO Check Kar** is a powerful **Android app** that provides real-time updates on **Indian IPOs** (Mainline & SME). It helps investors stay informed about **upcoming, ongoing, and past IPOs**, offering live subscription tracking, allotment status, grey market premium (GMP), and expert insights.  
 
